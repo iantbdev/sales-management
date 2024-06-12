@@ -102,19 +102,8 @@ button:focus {
   box-shadow: 0 0 0 3px var(--color-light), 0 0 0 4px var(--color);
   outline: none;
 }
-
 button:active {
   box-shadow: 0 0 0 3px var(--color), 0 0 0 4px var(--color);
-}
-
-button:disabled {
-  opacity: 0.9;
-  cursor: wait;
-}
-
-hr {
-  border: 2px solid black;
-  margin: 2rem auto;
 }
 
 .itens-container {

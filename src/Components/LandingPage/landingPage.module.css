@@ -15,18 +15,14 @@
   font-size: 1.2rem;
 }
 
-h1 {
-  font-size: 4rem;
-  text-align: left;
-  margin-bottom: 20px;
-}
 .banner {
   flex: 0 0 auto;
 }
-.banner img {
+.svg {
   width: 28vw;
   margin-right: 15vh;
   height: auto;
+  flex: 0 0 auto;
   max-width: 100%;
   box-sizing: border-box;
 }
@@ -40,12 +36,7 @@ h1 {
   .banner {
     margin-top: 20px;
   }
-  .banner img {
+  .svg {
     width: 50vw;
   }
-
-  /* .container {
-      height: auto;
-      padding: 20px;
-    } */
 }

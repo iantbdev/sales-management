@@ -1,41 +1,28 @@
 import React, { useState } from "react";
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  NavLink,
-  useNavigate,
-} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { userList } from "../../Data";
+import { useDispatch } from "react-redux";
+import { login } from "../../store/reducers/userReducer";
+import Icon from "../../img/icon.svg?react";
+import styles from "./login.module.css";
 
-// import { ReactComponent as Icon } from "/img/icon.svg";
-
-const login = () => {
+const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
 
   const navigate = useNavigate();
 
+  // Log-in do usuário
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    // alert("Enviando seus dados: " + email + " - " + password);
-
-    // fetch("https://react-7aa89-default-rtdb.firebaseio.com/users.json", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify({ email, password }),
-    // }).then((data) => data.json());
-
-    // .then((json) => console.log(json));
-
     const user = userList.find(
       (user) => user.email === email && user.password === password
     );
 
+    // Verifica se o user existe
     if (user) {
+      dispatch(login(user));
       navigate("/landingPage");
     } else {
       alert("Email ou senha incorrentos");
@@ -43,8 +30,8 @@ const login = () => {
   };
 
   return (
-    <div className="login">
-      <img src="./src/img/icon.svg" alt="Icon do Site" />
+    <div className={styles.login}>
+      <Icon className={styles.icon} />
       <form onSubmit={handleSubmit}>
         <input
           type="email"
@@ -69,4 +56,4 @@ const login = () => {
   );
 };
 
-export default login;
+export default Login;

@@ -30,46 +30,6 @@
   height: 100%;
 }
 
-span {
-  color: rgb(238, 238, 238);
-  font-size: 1.2rem;
-  display: inline-block;
-}
-
-table {
-  margin: 0 auto;
-  background: #45259a;
-  border-radius: 0.25rem;
-  width: 50%;
-  border-collapse: collapse;
-  text-align: center;
-}
-
-th {
-  font-size: 0.85em;
-  font-weight: 600;
-  color: #e96ae9;
-
-  padding: 0.5rem 1rem;
-}
-td {
-  color: white;
-  font-weight: 400;
-  padding: 0.65rem 1rem;
-}
-
-th,
-td {
-  border-bottom: 1px solid #240c64;
-}
-
-tbody tr {
-  transition: background 0.25s ease;
-}
-tbody tr:hover {
-  background: #541f80;
-}
-
 .botaoEditar {
   padding: 5px 10px;
   margin-right: 10px;

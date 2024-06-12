@@ -1,7 +1,11 @@
 import React, { useState, useRef } from "react";
 import styles from "./management.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { addProduct, deleteProduct, updateProduct } from "../../productReducer";
+import {
+  addProduct,
+  deleteProduct,
+  updateProduct,
+} from "../../store/reducers/productReducer";
 import Trash from "../../img/trash.svg?react";
 import Pencil from "../../img/pencil-square.svg?react";
 
@@ -22,6 +26,7 @@ const Management = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
+    // Verifica se o formulário está no modo de edição
     if (!isEditing) {
       dispatch(
         addProduct({
@@ -130,10 +135,10 @@ const Management = () => {
         <tbody>
           {products.map((product) => (
             <tr key={product.id}>
-              <td> {product.clientName} </td>
-              <td> {product.productName} </td>
-              <td> R$ {product.productPrice} </td>
-              <td>
+              <td data-label="Cliente"> {product.clientName} </td>
+              <td data-label="Produto"> {product.productName} </td>
+              <td data-label="Valor"> R$ {product.productPrice} </td>
+              <td data-label="Ações">
                 {" "}
                 <button
                   onClick={() => handleEdit(product)}

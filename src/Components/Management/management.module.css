@@ -27,7 +27,7 @@
 .botaoProduto {
   padding: 15px;
   color: white;
-  height: 50%;
+  height: 100%;
 }
 
 span {
@@ -84,4 +84,60 @@ tbody tr:hover {
 
 .botaoExcluir:hover {
   background-color: #dc3545;
+}
+
+@media screen and (max-width: 1216px) {
+  .botaoExcluir,
+  .botaoEditar {
+    margin: 10px 5px 10px 5px;
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .formProduto {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+    width: 70%;
+  }
+
+  table thead {
+    border: none;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 4px solid #240c64;
+    display: block;
+    margin-bottom: 0.625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #240c64;
+    display: block;
+    font-size: 0.95rem;
+    text-align: right;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
 }

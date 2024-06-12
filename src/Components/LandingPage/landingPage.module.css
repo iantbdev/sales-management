@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 25vh;
+  margin-left: 80px;
+}
+
+.container button {
+  background-color: #45259a;
+  padding: 15px;
+  border-radius: 8px;
+  color: whitesmoke;
+  margin: 20px;
+  font-size: 1.2rem;
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.banner {
+  flex: 0 0 auto;
+}
+.banner img {
+  width: 28vw;
+  margin-right: 15vh;
+  height: auto;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Media Query para telas menores que 975px */
+@media (max-width: 975px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .banner {
+    margin-top: 20px;
+  }
+  .banner img {
+    width: 50vw;
+  }
+
+  /* .container {
+      height: auto;
+      padding: 20px;
+    } */
+}

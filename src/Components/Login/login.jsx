@@ -45,12 +45,10 @@ const login = () => {
 
   return (
     <div className="login">
-      {/* <h1>Login</h1> */}
       <img src="./src/img/icon.svg" alt="Icon do Site" />
       <form onSubmit={handleSubmit}>
         <input
           type="email"
-          id="login-item"
           name="email"
           value={email}
           placeholder="E-mail"
@@ -60,7 +58,6 @@ const login = () => {
         <input
           type="password"
           name="password"
-          id="login-item"
           value={password}
           minLength={7}
           placeholder="Senha"

@@ -69,12 +69,14 @@ ul {
 
 input,
 textarea {
+  margin-bottom: 20px;
   display: block;
   border: 1px solid #ccc;
+  color: white;
   width: 100%;
   padding: 0.8rem;
   border-radius: var(--radius);
-  background: #eee;
+  background: transparent;
   transition: 0.2s;
 }
 
@@ -102,6 +104,7 @@ button:focus {
   box-shadow: 0 0 0 3px var(--color-light), 0 0 0 4px var(--color);
   outline: none;
 }
+
 button:active {
   box-shadow: 0 0 0 3px var(--color), 0 0 0 4px var(--color);
 }
@@ -139,12 +142,6 @@ button:active {
   }
 }
 
-#login-item {
-  margin-bottom: 20px;
-  background-color: transparent;
-  color: white;
-}
-
 .login button {
   display: block;
   width: 100%;
@@ -158,8 +155,4 @@ button:active {
   color: white;
   text-align: center;
   margin-bottom: 30px;
-}
-
-.hide {
-  display: none;
 }

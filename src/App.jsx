@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./Components/Login/login";
 import LandingPage from "./Components/LandingPage/landingPage";
 import Management from "./Components/Management/management";
+import Header from "./Components/Header/header";
 import { useSelector } from "react-redux";
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
   return (
     <div className="App">
       <BrowserRouter>
+        <Header />
         <Routes>
           <Route path="/" element={<Login />} />
           <Route

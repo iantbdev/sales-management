@@ -7,6 +7,13 @@
   text-align: center;
 }
 
+.confirmaAcao {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 99999;
+}
+
 .formProduto {
   display: inline-flex;
   margin-bottom: 40px;

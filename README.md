@@ -13,3 +13,7 @@ Programa de gerenciamento de vendas feito com React.
 # Tela de Gerenciamento de Vendas
 ![image](https://github.com/iantbdev/sales-management/assets/108193413/294f7d8c-7c5f-49f7-92ee-140674bad93f)
 
+Formulário qquando é clilcado o botão Editar:
+![image](https://github.com/iantbdev/sales-management/assets/108193413/a8bb78da-e1c3-434d-b9fc-79f0efdf24db)
+
+

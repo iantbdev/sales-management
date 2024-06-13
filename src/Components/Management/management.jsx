@@ -8,6 +8,7 @@ import {
 } from "../../store/reducers/productReducer";
 import Trash from "../../img/trash.svg?react";
 import Pencil from "../../img/pencil-square.svg?react";
+import Alert from "@mui/material/Alert";
 
 const Management = () => {
   const products = useSelector((state) => state.products);
@@ -18,9 +19,20 @@ const Management = () => {
   const [productPrice, setProductPrice] = useState("");
   const [isEditing, setIsEditing] = useState(false);
   const [editProductID, setEditProductID] = useState("");
+  const [showAlert, setShowAlert] = useState(false); // Para mostrar o alerta de que a ação funcionou
+  const [alertText, setAlertText] = useState(""); // Para definir o alerta de que a ação funcionou
 
   const formRef = useRef(null); // Referência para o formulário
   const newID = products.length ? products[products.length - 1].id + 1 : 1;
+
+  // Função para exibir o alerta com texto personalizado
+  const showCustomAlert = (text) => {
+    setAlertText(text);
+    setShowAlert(true);
+    setTimeout(() => {
+      setShowAlert(false);
+    }, 2000);
+  };
 
   // Função para adiconar produtos
   const handleSubmit = (event) => {
@@ -36,6 +48,7 @@ const Management = () => {
           productPrice,
         })
       );
+      showCustomAlert("Venda adicionada com sucesso :)");
     } else {
       dispatch(
         updateProduct({
@@ -47,12 +60,14 @@ const Management = () => {
       );
       setIsEditing(false);
       setEditProductID("");
+      showCustomAlert("Venda atualizada com sucesso :)");
     }
 
     // Reseta o formulário após o envio
     if (formRef.current) {
       formRef.current.reset();
     }
+
     setClientName("");
     setProductName("");
     setProductPrice("");
@@ -62,19 +77,23 @@ const Management = () => {
   const handleEdit = (product) => {
     setIsEditing(true);
     setEditProductID(product.id);
-
     setClientName(product.clientName);
     setProductName(product.productName);
     setProductPrice(product.productPrice);
   };
 
   // Função para deletar o produto
-  const handleDelete = (id) => {
+  const handleDelete = (id, text) => {
     dispatch(deleteProduct({ id }));
+    showCustomAlert("Venda deletada com sucesso  >:)");
   };
 
   return (
     <div className={styles.gerenciaVendas}>
+      <div className={styles.confirmaAcao}>
+        {showAlert && <Alert severity="success">{alertText}</Alert>}
+      </div>
+
       <h1 className={styles.titulo}>Vendas</h1>
       <h2>
         {isEditing ? "Atualize Venda" : "Add Venda"}{" "}

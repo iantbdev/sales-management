@@ -8,7 +8,7 @@ Programa de gerenciamento de vendas feito com React.
 ## Escolhas tecnológicas
 No projeto, foi utilizado o React juntamente com as bibliotecas React Router e Material UI para a criação de alertas que confirmam as ações dos usuários. Além disso, foi empregado Redux para o gerenciamento de estados globais e CSS Modules para a estilização, garantindo uma experiência de usuário eficiente e uma base de código organizada e modular. 
 
-Cada tela foi guardada em `src/Components/nome_da_tela` junto de sua estilização e outros componente se for o caso. Além das telas, `em src/Components` existe a Header. Já os reducers foram organizados em `src/store/reducers`. Para as imagens, `src/img`. Além desses caminhos, em `src` existem os arquivos App.jsx, main.jsx, Data.jsx (com os dados mock) e o App.css, que guarda as estilizações globais.
+Cada tela foi guardada em `src/Components/nome_da_tela` junto de sua estilização e outros componente se for o caso. Além das telas, em `src/Components` existe a Header. Já os reducers foram organizados em `src/store/reducers`. Para as imagens, `src/img`. Além desses caminhos, em `src` existem os arquivos App.jsx, main.jsx, Data.jsx (com os dados mock) e o App.css, que guarda as estilizações globais.
 
 ## Guia de configuração e execução
 1. Clone o repositório Git
